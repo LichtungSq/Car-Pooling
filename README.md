@@ -1,4 +1,4 @@
-# Car-Pooling-Project
+# Car Pooling Project
 NUS CS2012 Final Project: Web-Database Application of Car Pooling
 
 * A Web-database system for drivers, passengers and administrators using Bitami WAPP Stack and
