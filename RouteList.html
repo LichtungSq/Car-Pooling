@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v4.3.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.3.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <meta name="description" content="Web Site Builder Description">
+  <title>RouteList</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body style="background-color: #f0f0f0">
+<div id="routelist">
+<section class="menu cid-qyjvLk1Tsr" once="menu" id="menu1-h" data-rv-view="2401">
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <img src="assets/car.png" media-simple="true" style="height: 3rem;"> &nbsp;&nbsp;&nbsp;
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="NewRoute.html">CarPooling</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="NewRoute.html">Release</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link link text-white dropdown-toggle display-7" href="RouteList.html?type=0" data-toggle="dropdown-submenu" aria-expanded="false">MyRoute</a>
+                    <div class="dropdown-menu">
+                        <a class="text-white dropdown-item display-7" href="RouteList.html?type=0">All Routes</a>
+                        <a class="text-white dropdown-item display-7" href="RouteList.html?type=1">Successful</a>
+                        <a class="text-white dropdown-item display-7" href="RouteList.html?type=2">Bidding</a>
+                        <a class="text-white dropdown-item display-7" href="RouteList.html?type=3">Failed</a>
+                        <a class="text-white dropdown-item display-7" href="RouteList.html?type=4">Finished</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link link text-white dropdown-toggle display-7" href="Account.html" data-toggle="dropdown-submenu" aria-expanded="false">Account</a>
+                    <div class="dropdown-menu">
+                        <a class="text-white dropdown-item display-7" href="Password.html">Password Changing</a>
+                        <a class="text-white dropdown-item display-7" href="MyCar.html" aria-expanded="false">Car Management</a>
+                        <a class="text-white dropdown-item display-7" href="Account.html" aria-expanded="false">Personal Imformation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown open">
+                    <a class="nav-link link text-white dropdown-toggle display-7" href="Home.html" aria-expanded="true" data-toggle="dropdown-submenu">Logout</a>
+                    <div class="dropdown-menu">
+                        <a class="text-white dropdown-item display-7" href="Home.html" aria-expanded="true" v-on:click="logout">Logout</a>
+                        <a class="text-white dropdown-item display-7" href="Explore.html" aria-expanded="false" v-on:click="toBePassenger">To Be A Passenger</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-7" href="JoinUs.html">Join Us</a></div>
+        </div>
+    </nav>
+</section>
+
+<section class="cid-qynO8YzXQ4" id="pricing-tables1-1v" data-rv-view="2459" style="padding-bottom: 20px;padding-top: 120px">
+
+    <h1 class="display-2" style="text-align: center;margin-top: 100px" v-show="result">No Result :(</h1>
+
+    <div class="container">
+        <div class="media-container-row" v-for="x in row">
+
+            <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3" v-for="(item,index) in filteredItems(x)">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">{{item.status}}</h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-5">
+                              {{item.price}}</span>
+                        <small class="price-term mbr-fonts-style display-7"></small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                            <li class="list-group-item">{{item.date}}</li>
+                            <li class="list-group-item">From: {{item.origin}}</li><li class="list-group-item">To: {{item.destination}}</li>
+                        </ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5"><button style="border-radius: 100px" class="btn btn-black display-7" v-on:click="details(x,index)">Detail</button></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<div class="mbr-section-btn" style="text-align: center;background-color: #f0f0f0;padding-bottom: 20px">
+    <button style="border-radius: 100px" class="btn btn-md btn-black-outline display-4" v-on:click="more" v-show="show">MORE</button>
+</div>
+
+</div>
+
+<script src="assets/web/assets/jquery/jquery.min.js"></script>
+<script src="assets/popper/popper.min.js"></script>
+<script src="assets/tether/tether.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/smooth-scroll/smooth-scroll.js"></script>
+<script src="assets/dropdown/js/script.min.js"></script>
+<script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+<script src="assets/theme/js/script.js"></script>
+<script src="assets/vue.min.js"></script>
+<script src="assets/util.js"></script>
+  
+</body>
+</html>
+
+<script>
+    var app = new Vue({
+        el:'#routelist',
+        data: {
+            show: false,
+            sum: 0,
+            routelist:[],
+            total: 0,
+            row: 0,
+            result: false
+        },
+        created () {
+            vm = this;
+            if (getCookie("email") === null) {
+                window.location.href = 'Login.html';
+            }
+            url = location.search;
+            str = url.substr(1).split("=");
+            datas = {
+                email: getCookie("email"),
+                type: str[1]
+            };
+            $.ajax({
+                url: "PHP/MyRoute.php",
+                data: datas,
+                type: "POST",
+                dataType: "JSON",
+                success: function (result) {
+                    vm.routelist = result['result'];
+                    vm.sum = result['total'];
+                    vm.total = Math.floor((result['total'] - 1) / 4 + 1);
+                    vm.row = Math.min(2, vm.total);
+                    if (vm.row * 4 < vm.sum) vm.show = true;
+                    if (vm.sum === 0) vm.result = true;
+                },
+                error: function (result) {
+                    window.location.href = 'Login.html';
+                }
+            })
+        },
+        methods: {
+            filteredItems:function(number) {
+                return this.routelist.slice((number - 1) * 4, Math.min(number * 4, this.sum)) ;
+            },
+            details: function (x,index) {
+                index = (x - 1) * 4 + index;
+                setCookie("date",this.routelist[index].date,30);
+                setCookie("time",this.routelist[index].time,30);
+                setCookie("status", this.routelist[index].status,30) ;
+                window.location.href = 'RouteDetail.html';
+            },
+            more: function (event) {
+                vm = this;
+                vm.row = Math.min(2 + vm.row, vm.total);
+                if (vm.row * 4 >= vm.sum) vm.show = false;
+            },
+            logout: function (event) {
+                delCookie("email");
+                delCookie("identity");
+                window.location.href="Home.html"
+            },
+            toBePassenger: function(event) {
+                setCookie("identity", "passenger", 30);
+                window.location.href = 'Explore.html';
+            }
+        }
+    })
+</script>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Site made with Mobirise Website Builder v4.3.4, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.3.4, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <meta name="description" content="Website Generator Description">
+    <title>CarList</title>
+    <link rel="stylesheet" href="../assets/tether/tether.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../assets/soundcloud-plugin/style.css">
+    <link rel="stylesheet" href="../assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="../assets/data-tables/data-tables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../assets/theme/css/style.css">
+    <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
+
+    <style>
+        td {
+            vertical-align: middle !important;
+        }
+    </style>
+
+
+</head>
+<body style="background-color: #f0f0f0">
+<div id="carlist">
+    <section class="menu cid-qyjvLk1Tsr" once="menu" id="menu1-h" data-rv-view="2401">
+
+        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="menu-logo">
+                <div class="navbar-brand">
+                    <img src="../assets/car.png" media-simple="true" style="height: 3rem;"> &nbsp;&nbsp;&nbsp;
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="UserList.html">CarPooling Admin</a></span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="UserList.html">User</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="CarList.html">Car</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="BidList.html">Bid</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="RouteList.html">Route</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="Account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="Login.html" v-on:click="logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+<section class="section-table cid-qynUFUZewx" id="table1-22" data-rv-view="2544" style="background-color: #f0f0f0">
+
+
+
+    <div class="container container-table" style="padding-top: 50px">
+        <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">Car List</h2>
+        <div class="mbr-section-btn" style="text-align: center">
+            <a class="btn btn-md btn-black-outline display-3" href="NewCar.html">+ NEW CAR</a>
+        </div>
+        <br>
+
+        <div class="table-wrapper">
+            <div class="container">
+
+            </div>
+
+            <div class="container scroll">
+                <div class="col-12 col-md-12">
+                    <table class="table" cellspacing="0">
+                        <thead>
+                        <tr class="table-heads ">
+
+                            <th class="head-item mbr-fonts-style display-7" v-on:click="sort1">NUMBER</th>
+                            <th class="head-item mbr-fonts-style display-7" v-on:click="sort2">MODEL</th>
+                            <th class="head-item mbr-fonts-style display-7" v-on:click="sort3">SIZE</th>
+                            <th class="head-item mbr-fonts-style display-7" v-on:click="sort4">COLOR</th>
+                            <th class="head-item mbr-fonts-style display-7" v-on:click="sort5">OWNER</th>
+                            <th class="head-item mbr-fonts-style display-7" v-on:click="sort6">STATUS</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <tr v-for="(car,index) in cars" v-on:click="detail(index)">
+                            <td class="body-item mbr-fonts-style display-7">{{car.number}}</td>
+                            <td class="body-item mbr-fonts-style display-7">{{car.type}}</td>
+                            <td class="body-item mbr-fonts-style display-7">{{car.size}}</td>
+                            <td class="body-item mbr-fonts-style display-7">{{car.color}}</td>
+                            <td class="head-item mbr-fonts-style display-7">{{car.owner}}</td>
+                            <td class="head-item mbr-fonts-style display-7">{{car.status}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</div>
+
+
+<script src="../assets/web/assets/jquery/jquery.min.js"></script>
+<script src="../assets/popper/popper.min.js"></script>
+<script src="../assets/tether/tether.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/smooth-scroll/smooth-scroll.js"></script>
+<script src="../assets/dropdown/js/script.min.js"></script>
+<script src="../assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+<script src="../assets/data-tables/jquery.data-tables.min.js"></script>
+<script src="../assets/data-tables/data-tables.bootstrap4.min.js"></script>
+<script src="../assets/theme/js/script.js"></script>
+<script src="../assets/vue.min.js"></script>
+<script src="../assets/util.js"></script>
+
+
+</body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#carlist',
+        data: {
+            cars: [],
+            s1: 0,
+            s2: 0,
+            s3: 0,
+            s4: 0,
+            s5: 0,
+            s6: 0
+        },
+        created () {
+            vm = this;
+            if (getCookie("admin") === null) {
+                window.location.href = 'Login.html';
+            }
+            $.ajax({
+                url: "PHP/Car.php",
+                type: "POST",
+                dataType: "JSON",
+                success: function (result) {
+                    vm.cars = result['result'];
+                },
+                error: function (result) {
+                    vm.cars = []
+                }
+            })
+        },
+        methods: {
+            detail: function (index) {
+                setCookie("number",this.cars[index].number,30);
+                setCookie("size",this.cars[index].size,30);
+                setCookie("color",this.cars[index].color,30);
+                setCookie("type",this.cars[index].type,30);
+                setCookie("owner",this.cars[index].owner,30);
+                window.location.href = 'EditCar.html';
+            },
+            logout: function (event) {
+                delCookie("admin");
+                window.location.href="Login.html"
+            },
+            sort1: function (event) {
+                if (this.s1 === 0) this.cars = sortS(this.cars, 'number');
+                else this.cars = sortB(this.cars, 'number');
+                this.s1 = this.s1 ^ 1;
+            },
+            sort2: function (event) {
+                if (this.s2 === 0) this.cars = sortS(this.cars, 'type');
+                else this.cars = sortB(this.cars, 'type');
+                this.s2 = this.s2 ^ 1;
+            },
+            sort3: function (event) {
+                if (this.s3 === 0) this.cars = sortS(this.cars, 'size');
+                else this.cars = sortB(this.cars, 'size');
+                this.s3 = this.s3 ^ 1;
+            },
+            sort4: function (event) {
+                if (this.s4 === 0) this.cars = sortS(this.cars, 'color');
+                else this.cars = sortB(this.cars, 'color');
+                this.s4 = this.s4 ^ 1;
+            },
+            sort5: function (event) {
+                if (this.s5 === 0) this.cars = sortS(this.cars, 'owner');
+                else this.cars = sortB(this.cars, 'owner');
+                this.s5 = this.s5 ^ 1;
+            },
+            sort6: function (event) {
+                if (this.s6 === 0) this.cars = sortS(this.cars, 'status');
+                else this.cars = sortB(this.cars, 'status');
+                this.s6 = this.s6 ^ 1;
+            }
+        }
+    })
+</script>

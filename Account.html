@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v4.3.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.3.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <meta name="description" content="Site Builder Description">
+  <title>Account</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+<div id="account">
+    <section class="menu cid-qyjvLk1Tsr" once="menu" id="menu1-h" data-rv-view="2401">
+
+        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="menu-logo">
+                <div class="navbar-brand">
+                    <img src="assets/car.png" media-simple="true" style="height: 3rem;"> &nbsp;&nbsp;&nbsp;
+                    <span class="navbar-caption-wrap">
+                        <a class="navbar-caption text-white display-4" :href="go">CarPooling</a>
+                    </span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="NewRoute.html" v-show="Release">NewRoute</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-7" href="Explore.html" v-show="Search">Search</a></li>
+                    <li class="nav-item dropdown" v-show="MyRoute">
+                        <a class="nav-link link text-white dropdown-toggle display-7" href="RouteList.html?type=0" data-toggle="dropdown-submenu" aria-expanded="false">MyRoute</a>
+                        <div class="dropdown-menu">
+                            <a class="text-white dropdown-item display-7" href="RouteList.html?type=0">All Routes</a>
+                            <a class="text-white dropdown-item display-7" href="RouteList.html?type=1">Successful</a>
+                            <a class="text-white dropdown-item display-7" href="RouteList.html?type=2">Bidding</a>
+                            <a class="text-white dropdown-item display-7" href="RouteList.html?type=3">Failed</a>
+                            <a class="text-white dropdown-item display-7" href="RouteList.html?type=4">Finished</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown open" v-show="MyBid">
+                        <a class="nav-link link text-white dropdown-toggle display-7" href="BidList.html?type=0" aria-expanded="true" data-toggle="dropdown-submenu">MyBid</a>
+                        <div class="dropdown-menu">
+                            <a class="text-white dropdown-item display-7" href="BidList.html?type=0" aria-expanded="true">All Bids</a>
+                            <a class="text-white dropdown-item display-7" href="BidList.html?type=1" aria-expanded="false">Successful</a>
+                            <a class="text-white dropdown-item display-7" href="BidList.html?type=2" aria-expanded="false">Pending</a>
+                            <a class="text-white dropdown-item display-7" href="BidList.html?type=3" aria-expanded="false">Failed</a>
+                            <a class="text-white dropdown-item display-7" href="BidList.html?type=4" aria-expanded="false">Finished</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link link text-white dropdown-toggle display-7" href="Account.html" data-toggle="dropdown-submenu" aria-expanded="false">Account</a>
+                        <div class="dropdown-menu">
+                            <a class="text-white dropdown-item display-7" href="Password.html">Password Changing</a>
+                            <a class="text-white dropdown-item display-7" href="MyCar.html" aria-expanded="false">Car Management</a>
+                            <a class="text-white dropdown-item display-7" href="Account.html" aria-expanded="false">Personal Imformation</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown open">
+                        <a class="nav-link link text-white dropdown-toggle display-7" href="Home.html" aria-expanded="true" data-toggle="dropdown-submenu">Logout</a>
+                        <div class="dropdown-menu">
+                            <a class="text-white dropdown-item display-7" v-on:click="logout" aria-expanded="true">Logout</a>
+                            <a class="text-white dropdown-item display-7" aria-expanded="false" v-show="passenger" v-on:click="toBePassenger">To Be A Passenger</a>
+                            <a class="text-white dropdown-item display-7" aria-expanded="false" v-show="driver" v-on:click="toBeDriver">To Be A Driver</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-7" href="JoinUs.html">Join Us</a></div>
+            </div>
+        </nav>
+    </section>
+
+<section class="mbr-section form1 cid-qynWFeRxZO" id="form1-2e" data-rv-view="2536" style="background-color: #f0f0f0">
+    
+    <div class="container" style="margin-top: 50px">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8" style="margin-bottom: 0">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">My Account</h2>
+                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">{{info}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="media-container-column col-lg-8" data-form-type="formoid">
+            
+                    <form class="mbr-form" method="post" data-form-title="info">
+                        <div class="row row-sm-offset">
+                            <div class="col-md-12 multi-horizontal" data-for="email">
+                                <div class="form-group">
+                                    <label class="form-control-label mbr-fonts-style display-7" for="email-info">Email</label>
+                                    <input type="email" class="form-control" data-form-field="email" id="email-info" :value="emailv" disabled style="background-color: white">
+                                </div>
+                            </div>
+                            <div class="col-md-6 multi-horizontal" data-for="name">
+                                <div class="form-group">
+                                    <label class="form-control-label mbr-fonts-style display-7" for="name-info">Name</label>
+                                    <input type="text" class="form-control" data-form-field="name" id="name-info" :value="namev" disabled style="background-color: white">
+                                </div>
+                            </div>
+                            <div class="col-md-6 multi-horizontal" data-for="phone">
+                                <div class="form-group">
+                                    <label class="form-control-label mbr-fonts-style display-7" for="phone-info">Phone</label>
+                                    <input type="tel" class="form-control" data-form-field="phone" id="phone-info" :value="phonev" ref="phone" placeholder="(e.g. +65 84266203)">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <span class="input-group-btn"><button type="submit" class="btn btn-form btn-black display-7" v-on:click="Saves">Save</button></span>
+                    </form>
+
+                <form class="mbr-form" method="post" data-form-title="money" style="margin-top: 100px">
+                    <div class="row row-sm-offset">
+                        <div class="col-md-4 multi-horizontal" data-for="balance">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7" for="balance-money">Balance</label>
+                                <input type="text" class="form-control" data-form-field="balance" id="balance-money" ref="balance" :value="balancev" disabled style="background-color: white">
+                            </div>
+                        </div>
+                        <div class="col-md-5 multi-horizontal" data-for="topup">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7" for="topup-money">TopUp</label>
+                                <input type="number" min="0" class="form-control" data-form-field="topup" ref="topup" id="topup-money" :value="topv">
+                            </div>
+                        </div>
+                        <div class="col-md-3 multi-horizontal">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7"></label>
+                                <span class="input-group-btn"><button type="submit" class="btn btn-form btn-black display-7" v-on:click="Topup">TopUp</button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+  <script src="assets/vue.min.js"></script>
+  <script src="assets/util.js"></script>
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/formoid/formoid.min.js"></script>
+  <script src="assets/vue.min.js"></script>
+  <script src="assets/util.js"></script>
+
+
+</body>
+</html>
+
+
+<script >
+    var app = new Vue({
+        el:'#account' ,
+        data: {
+            Release: false,
+            Search: false,
+            MyRoute: false,
+            MyBid: false,
+            passenger: false,
+            driver: false,
+            go: '',
+            emailv: '',
+            namev: '',
+            balancev: '',
+            phonev: '',
+            info: '',
+            topv: '0'
+        },
+        created () {
+            vm = this;
+            if (getCookie("email") === null) {
+                window.location.href = 'Login.html';
+            } else if (getCookie("identity") === "passenger") {
+                this.Search = true;
+                this.MyBid = true;
+                this.driver = true;
+                this.go = 'Explore.html'
+            } else if (getCookie("identity") === "driver") {
+                this.Release = true;
+                this.MyRoute = true;
+                this.passenger = true;
+                this.go = 'NewRoute.html'
+            }
+            datas = {
+                email: getCookie("email")
+            };
+            $.ajax({
+                url: "PHP/MyInfo.php",
+                type: "POST",
+                data: datas,
+                dataType: "JSON",
+                success: function (result) {
+                    if (result['errno'] === 1) {
+                        delCookie("email");
+                        delCookie("identity");
+                        window.location.href = 'Login.html';
+                    } else {
+                        vm.emailv = getCookie("email");
+                        vm.phonev = result['phone'];
+                        vm.namev = result['first_name'] + " " + result['last_name'];
+                        vm.balancev = "$" + result['money'];
+                    }
+                },
+                error: function (result) {
+                    delCookie("email");
+                    delCookie("identity");
+                    window.location.href = 'Login.html';
+                }
+            })
+        },
+        methods: {
+            Topup: function(event) {
+                vm = this;
+                if (vm.$refs.topup.value === '') {
+                    vm.topv = "0"
+                }
+                re = /^(\d+)$/;
+                if (!re.test(vm.$refs.topup.value)) {
+                    return
+                }
+                datas = {
+                    email: getCookie("email"),
+                    money: vm.$refs.topup.value
+                };
+                $.ajax({
+                    url: "PHP/TopUp.php",
+                    type: "POST",
+                    data: datas,
+                    dataType: "JSON",
+                    success: function (result) {
+                        if (result['errno'] === 1) {
+                            window.location.href = "Account.html";
+                        } else {
+                            window.location.href = "Account.html";
+                        }
+                    },
+                    error: function (result) {
+                        window.location.href = "Account.html";
+                    }
+                })
+            },
+            Saves: function (event) {
+                vm = this;
+                if (vm.$refs.phone.value === '') {
+                    vm.info = 'Empty Value';
+                    return
+                }
+                re = /^\+\d{2,3}\s\d{7,}$/;
+                if (!re.test(vm.$refs.phone.value)) {
+                    vm.info = 'Enter Correct Phone Number';
+                    return
+                }
+                datas = {
+                    email: getCookie("email"),
+                    phone_number: vm.$refs.phone.value
+                };
+                $.ajax({
+                    url: "PHP/ModifyPhoneNumber.php",
+                    type: "POST",
+                    data: datas,
+                    dataType: "JSON",
+                    success: function (result) {
+                        if (result['errno'] === 0) {
+                            window.location.href = "Account.html";
+                        } else {
+                            vm.info = 'Conflict :('
+                        }
+                    },
+                    error: function (result) {
+                        vm.info = 'Fail :( Try Again'
+                    }
+                })
+            },
+            logout: function (event) {
+                delCookie("email");
+                delCookie("identity");
+                window.location.href="Home.html"
+            },
+            toBePassenger: function(event) {
+                setCookie("identity", "passenger", 30);
+                window.location.href = 'Explore.html';
+            },
+            toBeDriver: function (event) {
+                setCookie("identity", "driver", 30);
+                window.location.href = 'NewRoute.html';
+            }
+        }
+    })
+</script>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Site made with Mobirise Website Builder v4.3.4, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.3.4, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <meta name="description" content="Site Generator Description">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/tether/tether.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../assets/soundcloud-plugin/style.css">
+    <link rel="stylesheet" href="../assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="../assets/theme/css/style.css">
+    <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
+
+
+</head>
+<body style="background-color: #efefef">
+<div id="login">
+<section class="mbr-section form1 cid-qykfJshKMN" id="form1-y" data-rv-view="2411" >
+
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8" style="margin-bottom: 0">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
+                    <br>PLEASE LOGIN</h2>
+                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">{{info}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="media-container-column col-lg-7" data-form-type="formoid">
+                <form class="mbr-form" action="" method="post" data-form-title="adminlogin">
+                    <div class="row row-sm-offset">
+                        <div class="col-md-12 multi-horizontal" data-for="username">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7" for="username-adminlogin">UserName</label>
+                                <input type="text" class="form-control" ref="username" data-form-field="username" required id="username-adminlogin" style="background-color: #f8f8f8">
+                            </div>
+                        </div>
+                        <div class="col-md-12 multi-horizontal" data-for="password">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7" for="password-adminlogin">Password</label>
+                                <input type="password" class="form-control" ref="password" data-form-field="password" required id="password-adminlogin" style="background-color: #f8f8f8">
+                            </div>
+                        </div>
+
+                            <span class="input-group-btn" style="margin: auto;padding-top: 10px">
+                                <button v-on:click="login" type="submit" class="btn btn-form btn-black display-7" >Login</button>
+                            </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+
+<script src="../assets/web/assets/jquery/jquery.min.js"></script>
+<script src="../assets/popper/popper.min.js"></script>
+<script src="../assets/tether/tether.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/smooth-scroll/smooth-scroll.js"></script>
+<script src="../assets/dropdown/js/script.min.js"></script>
+<script src="../assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+<script src="../assets/theme/js/script.js"></script>
+<script src="../assets/formoid/formoid.min.js"></script>
+<script src="../assets/vue.min.js"></script>
+<script src="../assets/util.js"></script>
+
+
+</body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#login',
+        data: {
+            info: ''
+        },
+        methods: {
+            login: function (event) {
+                vm = this;
+                if (vm.$refs.username.value === '' || vm.$refs.password.value === '') {
+                    vm.info = 'Empty Value';
+                    return
+                }
+                datas = {
+                    email: vm.$refs.username.value,
+                    password: vm.$refs.password.value
+                };
+                $.ajax({
+                    url: "PHP/AdminSignIn.php",
+                    type: "POST",
+                    data: datas,
+                    dataType: "JSON",
+                    success: function (result) {
+                        if (result['errno'] === 1) {
+                            vm.info = 'Invalid UserName or Password'
+                        } else {
+                            setCookie("admin", vm.$refs.username.value, 30);
+                            window.location.href = 'UserList.html';
+                        }
+                    },
+                    error: function (result) {
+                        vm.info = 'Fail :( Try Again'
+                    }
+                })
+            }
+        }
+    })
+</script>
